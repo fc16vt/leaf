@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.4;
+  background-color: #222;
+  color: #d3cfcf;
+}
+
+h2 {
+  font-family: "Prompt", sans-serif;
+  margin: 1em 0;
+}
+
+p {
+  margin: 1.5em 0;
+}
+
+img {
+  display: block;
+  width: 90%;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: #afe75a;
+  font-style: italic;
+}
+
+.container {
+  max-width: 90vw;
+  margin: auto;
+  background-color: #2c2b2b;
+  padding: 1em 3em;
+  text-align: center;
+}
+
+.container header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+}
+
+.container header .txt p.date {
+  margin: 0;
+  font-size: .7rem;
+  font-style: italic;
+}
+
+.container header .image {
+  margin: 3em 0 2em 0;
+}
+
+.container header .image img.logo {
+  max-height: 330px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.container main h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.container main h2::before {
+  content: ' ';
+  position: absolute;
+  width: 50%;
+  height: 10px;
+  z-index: -1;
+  bottom: .3rem;
+  left: -20%;
+  background: #f049f0;
+}
+
+.container main section {
+  -webkit-column-count: 1;
+          column-count: 1;
+  -webkit-column-gap: 2em;
+          column-gap: 2em;
+}
+
+.container main section article p.alt {
+  color: #000;
+  background: #c713c7;
+  padding: 1em;
+  font-style: italic;
+}
+
+.container main section img {
+  padding-top: 2em;
+}
+
+.container main section .image-container figcaption {
+  font-style: italic;
+}
+
+@media only screen and (min-width: 768px) {
+  html, body {
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  .container {
+    text-align: left;
+  }
+  .container header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container main section {
+    -webkit-column-count: 2;
+            column-count: 2;
+    -webkit-column-rule-style: solid;
+            column-rule-style: solid;
+    -webkit-column-rule-color: #222;
+            column-rule-color: #222;
+  }
+  .container main section figcaption {
+    text-align: center;
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  html, body {
+    font-size: 1.4rem;
+  }
+  .container {
+    text-align: left;
+  }
+  .container main section {
+    -webkit-column-count: 3;
+            column-count: 3;
+    -webkit-column-rule-style: solid;
+            column-rule-style: solid;
+    -webkit-column-rule-color: #222;
+            column-rule-color: #222;
+  }
+  .container main section figcaption {
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=style.css.map */

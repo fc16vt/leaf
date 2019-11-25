@@ -1,0 +1,169 @@
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Prompt', sans-serif;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: $primary-font;
+    line-height: 1.4;
+    background-color: #222;
+    color: rgb(211, 207, 207);
+}
+
+h2 {
+    font-family: $secondary-font;
+    margin: 1em 0;
+}
+
+p {
+    margin: 1.5em 0;
+}
+
+img {
+    display: block;
+    width: 90%;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(175, 231, 90);
+    font-style: italic;
+}
+
+.container {
+    max-width: 90vw;
+    margin: auto;
+    background-color: rgb(44, 43, 43); 
+    padding: 1em 3em;
+    text-align: center;
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        justify-items: center;
+
+        .txt {
+
+            p.date {
+                margin: 0;
+                font-size: .7rem;
+                font-style: italic;
+            }
+        }
+
+        .image {
+            margin: 3em 0 2em 0;
+
+            img.logo {
+                max-height: 330px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    main {
+
+        h2 {
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+
+            &::before {
+                content: ' ';
+                position: absolute;
+                width: 50%;
+                height: 10px;
+                z-index: -1;
+                bottom: .3rem;
+                left: -20%;
+                background: rgb(240, 73, 240);
+            }
+        }
+
+        section {
+            column-count: 1;
+            column-gap: 2em;
+
+            article p.alt {
+                color: #000;
+                background:  rgb(199, 19, 199);
+                padding: 1em;
+                font-style: italic;
+            }
+
+            img {
+                padding-top: 2em;
+            }
+
+            .image-container {
+
+                figcaption {
+                    font-style: italic;
+                }
+            }
+        }
+
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    html, body {
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    .container {
+        text-align: left;
+
+        header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        main {
+
+            section {
+                column-count: 2;
+                column-rule-style: solid;
+                column-rule-color: #222; 
+
+                figcaption {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    html, body {
+        font-size: 1.4rem;
+
+    }
+
+    .container {
+        text-align: left;
+
+        main {
+
+            section {
+                column-count: 3;
+                column-rule-style: solid;
+                column-rule-color: #222; 
+
+                figcaption {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
